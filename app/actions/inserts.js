@@ -1,0 +1,5 @@
+export const INSERTS_INDEX_REQUEST = 'INSERTS_INDEX_REQUEST';
+export const INSERTS_INDEX_SUCCESS = 'INSERTS_INDEX_SUCCESS';
+export const INSERTS_INDEX_FAILURE = 'INSERTS_INDEX_FAILURE';
+
+export const requestInsertsIndex = () => ({ type: INSERTS_INDEX_REQUEST });

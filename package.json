@@ -28,7 +28,8 @@
     "lint:fix": "eslint . --fix",
     "prettier": "prettier --write '*.js'",
     "format-code": "yarn run prettier && yarn run lint:fix",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "format": "prettier --write \"lib/**/*.ts\""
   },
   "lint-staged": {
     "*.js": [

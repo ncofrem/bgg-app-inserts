@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import auth from './auth';
+import inserts from './inserts';
 import notice from './notice';
 
 export default combineReducers({
   notice,
-  auth,
+  inserts,
 });

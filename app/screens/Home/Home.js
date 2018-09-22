@@ -45,11 +45,8 @@ class HomeScreen extends React.Component {
 
 const mapStateToProps = (state) => {
   const { notice } = state;
-  const { signedIn, headers } = state.auth;
   return {
     notice,
-    signedIn,
-    headers,
   };
 };
 
