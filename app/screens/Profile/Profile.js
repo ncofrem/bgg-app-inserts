@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './styles';
 import { View, Text } from 'react-native';
-import { requestSignOut } from '../../actions/auth';
 import { connectAlert, DefaultButton } from '../../components';
 import { connect } from 'react-redux';
 
@@ -17,7 +16,6 @@ class ProfileScreen extends React.Component {
     navigation: PropTypes.shape({
       navigate: PropTypes.func.isRequired,
     }).isRequired,
-    dispatch: PropTypes.func.isRequired,
     user: PropTypes.shape({
       email: PropTypes.string,
     }),
@@ -46,7 +44,6 @@ class ProfileScreen extends React.Component {
   }
 
   signOut = () => {
-    this.props.dispatch(requestSignOut());
     this.props.navigation.navigate('Auth');
   };
 

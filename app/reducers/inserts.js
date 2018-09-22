@@ -22,7 +22,7 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         ongoingRequest: { ...state.ongoingRequest, index: false },
-        groupedOrders: action.result,
+        inserts: action.result,
       };
     case INSERTS_INDEX_FAILURE:
       return {

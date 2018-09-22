@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { View, Text } from 'react-native';
 import styles from './styles';
 import { connectAlert } from '../../components';
+import { requestInsertsIndex } from '../../actions/inserts';
 import { connect } from 'react-redux';
 
 class HomeScreen extends React.Component {
@@ -12,6 +13,7 @@ class HomeScreen extends React.Component {
       title: PropTypes.string,
       message: PropTypes.string,
     }),
+    dispatch: PropTypes.func.isRequired,
     alertWithType: PropTypes.func,
   };
 
@@ -24,6 +26,10 @@ class HomeScreen extends React.Component {
     alertWithType: () => null,
   };
 
+  componentDidMount() {
+    this.getIndexAsync();
+  }
+
   componentWillReceiveProps(nextProps) {
     if (nextProps.notice.message !== '') {
       this.props.alertWithType(
@@ -33,6 +39,10 @@ class HomeScreen extends React.Component {
       );
     }
   }
+
+  getIndexAsync = async () => {
+    this.props.dispatch(requestInsertsIndex());
+  };
 
   render() {
     return (

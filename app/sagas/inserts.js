@@ -10,15 +10,11 @@ import { runDefaultSaga } from './default';
 
 const insertsIndexRequest = () => API.get('/inserts');
 function* insertsIndexsSuccessCallback(result, response) {
-  if (result.success) {
-    yield put({
-      type: INSERTS_INDEX_SUCCESS,
-      result,
-      response,
-    });
-  } else {
-    throw new Error(response.errors.join('\n'));
-  }
+  yield put({
+    type: INSERTS_INDEX_SUCCESS,
+    result,
+    response,
+  });
 }
 function* insertsIndexsFailureCallback(response) {
   yield put({ type: INSERTS_INDEX_FAILURE });

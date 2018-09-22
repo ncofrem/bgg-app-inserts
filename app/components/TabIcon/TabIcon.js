@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Icon from 'react-native-vector-icons/Ionicons';
+import Icon from 'react-native-vector-icons/SimpleLineIcons';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
 const TabIcon = ({

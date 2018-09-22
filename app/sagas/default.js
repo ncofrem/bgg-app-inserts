@@ -11,6 +11,7 @@ export function* runDefaultSaga(callRequest, successCallback, failureCallback) {
       timeout: delay(API.getGlobalTimeout()),
     });
 
+
     if (timeout) {
       throw new Error(API.getTimeoutMessage());
     }

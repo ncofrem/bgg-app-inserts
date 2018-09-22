@@ -44,12 +44,12 @@ const appTabNavigatorOptions = {
     },
   },
   home: {
-    tabBarLabel: 'HOME',
+    tabBarLabel: 'INSERTS',
     tabBarIcon: ({ focused, tintColor }) =>
       TabBarIconWrapper({ focused, tintColor }, styles.homeDefault, styles.homeFocused),
   },
   profile: {
-    tabBarLabel: 'PROFILE',
+    tabBarLabel: 'INFO',
     tabBarIcon: ({ focused, tintColor }) =>
       TabBarIconWrapper({ focused, tintColor }, styles.otherDefault, styles.otherFocused),
   },

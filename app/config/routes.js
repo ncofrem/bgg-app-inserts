@@ -44,18 +44,10 @@ const AppStack = createBottomTabNavigator(
   appTabNavigatorOptions.general,
 );
 
-const AuthStack = createStackNavigator(
-  {
-    Login: screens.LoginScreen,
-  },
-  { initialRouteName: 'Login' },
-);
-
 const RootStack = createSwitchNavigator(
   {
     Splash: screens.SplashScreen,
     App: AppStack,
-    Auth: AuthStack,
   },
   { initialRouteName: 'Splash' },
 );
